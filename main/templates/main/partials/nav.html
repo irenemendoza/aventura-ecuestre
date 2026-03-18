@@ -1,0 +1,27 @@
+<!-- Menú: oculto en mobile, horizontal en desktop -->
+<ul id="menu" class="
+    flex-col items-center justify-center gap-10 
+    fixed top-[100px] left-0 h-[calc(100vh-100px)] w-full z-50
+    bg-black/70 backdrop-blur-sm 
+    px-4 py-6 
+
+    md:flex md:static md:h-auto md:w-auto md:flex-row md:items-center md:justify-end
+    md:bg-transparent md:backdrop-blur-none
+    md:px-0 md:py-0">
+
+    <li>
+        <a href="{% url 'home' %}" class="text-(--color-oceano) transition-colors duration-200 hover:text-(--color-luz) hover:font-bold">INICIO</a>
+    </li>
+    <li>
+        <a href="{% url 'about' %}" class="text-(--color-oceano)  transition-colors duration-200 hover:text-(--color-luz) hover:font-bold">QUIÉNES SOMOS</a>
+    </li>
+    <li>
+        <a href="{% url 'activities' %}" class="text-(--color-oceano)  transition-colors duration-200 hover:text-(--color-luz) hover:font-bold">ACTIVIDADES</a>
+    </li>
+    <li>
+        <a href="{% url 'contact' %}"  class="text-(--color-oceano)  transition-colors duration-200 hover:text-(--color-luz) hover:font-bold">CONTACTO</a>
+    </li>
+    <li class="p-2 border border-(--color-estrecho)">
+        <a href=""  class="text-(--color-poniente)  transition-colors duration-200 hover:text-(--color-estrecho) hover:font-bold">RESERVAR</a>
+    </li>
+</ul>

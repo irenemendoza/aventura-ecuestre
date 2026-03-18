@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Aventura Ecuestre - Layout{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/output.css' %}">
+</head>
+<body class="bg-(--color-dark)">
+    <!-- Header -->
+    <header>
+        {% include 'main/partials/header.html' %}
+    </header>
+   
+    <!-- Main Content -->
+    <main class="container-fluid py-4 bg-(--color-cal)">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 mt-5">
+        {% include 'main/partials/footer.html' %}
+    </footer>
+    
+    <script src="{% static 'main/js/main.js' %}" defer></script>
+
+</body>
+</html>

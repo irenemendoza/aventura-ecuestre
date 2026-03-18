@@ -1,0 +1,71 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Aventura Ecuestre - Home{% endblock %}
+
+{% block content %}
+    <section class="relative h-[50vh] flex flex-col items-start justify-center">
+        <!-- Imagen de fondo -->
+        <img 
+            src="{% static 'main/images/aventura_ecuestre_hero.jpg' %}" 
+            alt="" 
+            class="absolute inset-0 w-full h-full object-cover object-[center_35%]"
+        >
+        <!-- Capa oscura encima de la imagen -->
+        <div class="absolute inset-0 bg-white/20"></div>
+        <!-- Texto sobre la imagen -->
+        <h2 class="
+            z-10 p-10
+            font-cormorant font-bold
+            "> 
+            ---- TARIFA · CÁDIZ · PARQUE NATURAL DEL ESTRECHO</h2>
+        <h1 class="
+            relative 
+            z-10 text-center px-10
+            text-white text-5xl font-cormorant font-bold"
+            >
+            Cabalga libre en la <span>Costa de la Luz</span>
+        </h1>
+        <p class="z-10 p-10">Paseos a caballo por las playas más salvajes de Andalucía, con vistas al continente africano.</p>
+        <button>RESERVAR EXPERIENCIA</button>
+        <a href="">VER ACTIVIDADES</a>
+    </section>
+    <section>
+        <div id="cta1">
+            <p>+15<span>AÑOS DE EXPERIENCIA</span></p>
+        </div>
+                <div id="cta2">
+            <p>DOMA LIBRE<span>BIENESTAR ANIMAL</span></p>
+        </div>
+        <div id="cta3">
+            <p>TODOS LOS NIVELES<span>SIN EXPERIENCIA PREVIA</span></p>
+        </div>
+    </section>
+    <section>
+        <h2>NUESTRAS RUTAS</h2>
+        <h3>Elige tu aventura</h3>
+        <article>
+            <img src="" alt="">
+            <h4>Paseo por la playa</h4>
+            <p>Arena, olas y otro continente en el horizonte. La experiencia más demandada.</p>
+            <p><a href=""><img src="{% static 'images/icons/star.svg'} %" alt=""> MÁS POPULAR</a></p>
+        </article>
+        <article>
+            <img src="" alt="">
+            <h4>Ruta por el pinar</h4>
+            <p>Senderos sombreados por el Parque Natural del Estrecho.</p>
+            <p><a href="">NATURALEZA</a></p>
+        </article>
+        <article>
+            <img src="" alt="">
+            <h4>Atardecer en libertad</h4>
+            <p>Los caballos en su hábitat natural al caer el sol. Experiencia única.</p>
+            <a href="">EXCLUSIVO</a>
+        </article>
+    </section>
+    
+    <section>
+        <p>"Nuestros caballos viven libres en el campo. Creemos en el vínculo real, no en la doma forzada.</p>
+        <p>FILOSOFÍA · DOMA LIBRE · BIENESTAR ANIMAL</p>
+    </section>
+{% endblock %}

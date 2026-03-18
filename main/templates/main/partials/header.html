@@ -1,0 +1,21 @@
+{% load static %}
+
+<div class="flex items-center justify-between px-4 py-3 bg-(--color-mar)">
+    <a href="/">
+        <img class="h-16 w-auto" src="{% static 'main/images/aventura_ecuestre_logo.webp' %}">
+    </a>
+
+    <!-- Botón hamburguesa: visible solo en mobile -->
+    <button id="menu-toggle" class="md:hidden">
+        <img src="{% static 'main/images/icons/burger_menu.svg' %}" alt="menu" class="h-8 w-auto">
+    </button>
+
+
+    <!-- Navbar -->    
+    {% include 'main/partials/nav.html' %}
+</div>
+
+
+
+<!-- Messages -->
+{% include 'main/partials/messages.html' %}
