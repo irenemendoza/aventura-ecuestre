@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="{% static 'main/images/aventura_ecuestre_favicon.svg' %}">
     <title>{% block title %}Aventura Ecuestre - Layout{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'main/css/output.css' %}">
 </head>
@@ -14,12 +15,16 @@
     </header>
    
     <!-- Main Content -->
-    <main class="container-fluid py-4 bg-(--color-cal)">
+    <main class="
+        w-full
+        
+         bg-(--color-cal)"
+         >
         {% block content %}{% endblock %}
     </main>
 
     <!-- Footer -->
-    <footer class="text-center py-3 mt-5">
+    <footer class="text-center">
         {% include 'main/partials/footer.html' %}
     </footer>
     

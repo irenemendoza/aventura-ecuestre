@@ -2,34 +2,58 @@
 @source "../../../templates";
 
 @font-face {
-  font-family: 'Cormorant';
-  src: url('/static/main/fonts/Cormorant-Regular.ttf') format('truetype');
+  font-family: 'Cormorant Garamond';
+  src: url('/static/main/fonts/CormorantGaramond-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Cormorant';
-  src: url('/static/main/fonts/Cormorant-Bold.ttf') format('truetype');
+  font-family: 'Cormorant Garamond';
+  src: url('/static/main/fonts/CormorantGaramond-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Cormorant';
-  src: url('/static/main/fonts/Cormorant-LightItalic.ttf') format('truetype');
+  font-family: 'Cormorant Garamond';
+  src: url('/static/main/fonts/CormorantGaramond-LightItalic.ttf') format('truetype');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Jost';
+  src: url('/static/main/fonts/Jost-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/static/main/fonts/Jost-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/static/main/fonts/Jost-Italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
 @theme {
   --color-cal: #F8F4EE; /* Fondo base */
   --color-cielo: #4A90C4; /* Color primario */
   --color-poniente: #E8835A; /* CTA */
   --color-arena: #E8C87A; /* Fondos de sección */
+  --color-trece: #7A5A3A; /* Texto */
   --color-tierra: #3D2E1E; /* Footer */
   --color-oceano: #7EC8E3; /* Tags */
   --color-estrecho: #D45838; /* Hover del CTA */
@@ -37,5 +61,6 @@
   --color-marisma: #8AA89A; /* Verde neutro */
   --color-mar: #2A5C8A; /* navbar */
 
-  --font-cormorant: 'Cormorant', sans-serif;
+  --font-cormorantgaramond: 'Cormorant Garamond', Georgia, sans-serif;
+  --font-sans: 'Jost', sans-serif;
 }

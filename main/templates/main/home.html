@@ -4,7 +4,11 @@
 {% block title %}Aventura Ecuestre - Home{% endblock %}
 
 {% block content %}
-    <section class="relative h-[50vh] flex flex-col items-start justify-center">
+    <section class="
+    relative 
+    h-[50vh] w-full
+    flex flex-col justify-center
+    ">
         <!-- Imagen de fondo -->
         <img 
             src="{% static 'main/images/aventura_ecuestre_hero.jpg' %}" 
@@ -14,58 +18,207 @@
         <!-- Capa oscura encima de la imagen -->
         <div class="absolute inset-0 bg-white/20"></div>
         <!-- Texto sobre la imagen -->
+        <div id="content_hero" class="
+        z-10 p-10
+        w-full
+        flex-row justify-center
+        
+        md:w-[60%]
+        md:self-start"
+        >
+            <h2 class="
+                font-cormorantgaramond font-bold text-(--color-mar)
+                text-center
+                py-5
+
+                md:text-xl
+                md:text-left
+                "> 
+                ---- TARIFA · CÁDIZ · PARQUE NATURAL DEL ESTRECHO</h2>
+            <h1 class="
+                relative 
+                text-center
+                text-(--color-cal) text-5xl font-cormorantgaramond font-bold
+
+                md:text-[60px]
+                md:inline
+                md:leading-tight
+                "
+                >
+                <span class="
+                block
+
+                md:text-left
+                ">Cabalga libre </span><span class="">en la <strong class="text-(--color-arena)">Costa de la Luz</strong></span>
+            </h1>
+            <p class="
+                py-5
+                text-center text-(--color-cal)
+
+                md:text-xl
+                md:text-left
+                ">Paseos a caballo por las playas más salvajes de Andalucía,<br>con vistas al continente africano.</p>
+            <div id="hero_buttons" class="
+                py-5
+                text-center
+
+                md:text-left
+                md:flex md:items-center md:gap-7
+                ">
+                <button class="
+                    text-(--color-tierra)
+                    border
+                    border-(--color-tierra)
+                    hover:bg-(--color-tierra) hover:text-(--color-cal)
+                    p-2">RESERVAR EXPERIENCIA</button>
+                <a href="" class="
+                    text-(--color-cal)
+                    hover:text-(--color-poniente)
+                    "
+                    >VER ACTIVIDADES</a>
+            </div>
+            </div>
+    </section>
+    <section class="
+        grid grid-cols-3
+        gap-0.5
+        ">
+        <div id="cta1" class="
+            bg-(--color-cielo)
+            p-5">
+            <p class="text-(--color-cal)
+            text-2xl">+13</p>
+            <p class="
+            text-(--color-cal) text-xs
+            font-light">AÑOS DE EXPERIENCIA</p>          
+        </div>
+        <div id="cta2" class="
+            bg-(--color-cielo)
+            p-5">
+            <p class="text-(--color-cal)
+            text-2xl
+            ">Doma natural</p>
+            <p class="
+            text-(--color-cal) text-xs">BIENESTAR ANIMAL</p>
+               
+        </div>
+        <div id="cta3" class="
+            bg-(--color-cielo)
+            p-5">
+            <p class="text-(--color-cal)
+            md:text-2xl">Todos los niveles</p>
+            <p class="
+            text-(--color-cal) text-xs">SIN EXPERIENCIA PREVIA</p>
+        </div>
+    </section>
+    <section class="
+        p-10
+        ">
         <h2 class="
-            z-10 p-10
-            font-cormorant font-bold
-            "> 
-            ---- TARIFA · CÁDIZ · PARQUE NATURAL DEL ESTRECHO</h2>
-        <h1 class="
-            relative 
-            z-10 text-center px-10
-            text-white text-5xl font-cormorant font-bold"
-            >
-            Cabalga libre en la <span>Costa de la Luz</span>
-        </h1>
-        <p class="z-10 p-10">Paseos a caballo por las playas más salvajes de Andalucía, con vistas al continente africano.</p>
-        <button>RESERVAR EXPERIENCIA</button>
-        <a href="">VER ACTIVIDADES</a>
-    </section>
-    <section>
-        <div id="cta1">
-            <p>+15<span>AÑOS DE EXPERIENCIA</span></p>
+            text-xs text-(--color-mar)"
+            >NUESTRAS RUTAS</h2>
+        <h3 class="
+            py-5">Elige tu aventura</h3>
+        <div class="
+            md:grid md:grid-cols-3 md:gap-4">
+            <article class="
+                border border-(--color-marisma) rounded-xl
+                overflow-hidden
+                mb-2
+                ">
+                <img src="{% static 'main/images/aventura_ecuestre_beach.jpg' %}" alt="Caballos paseando por la playa" class="
+                mb-4
+                
+                md:h-100">
+                <h4 class="px-2 mb-2">Paseo por la playa</h4>
+                <p class="
+                    px-2 mb-2
+                    text-(--color-tierra)
+                    ">
+                    Arena, olas y otro continente en el horizonte.<br>La experiencia más demandada.
+                </p>
+                <p class="px-2 mb-2">
+                    <a href="" class="
+                        group
+                        inline-flex items-center gap-1
+                        p-2
+                        border 
+                        text-(--color-poniente) hover:text-(--color-cal)
+                        hover:bg-(--color-poniente)">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="block h-3 w-auto fill-(--color-poniente) group-hover:fill-(--color-cal)" viewBox="0 0 640 640">
+                            <path d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/>
+                        </svg>
+                        <span>MÁS POPULAR</span>
+                    </a></p>
+            </article>
+            <article class="
+                border border-(--color-marisma) rounded-xl
+                overflow-hidden
+                mb-2 pb-3
+                ">
+                <img src="{% static 'main/images/aventura_ecuestre_paseos2.jpg' %}" alt="Caballos paseando por el pinar" class="
+                    mb-4
+
+                    md:h-100">
+                <h4 class="px-2 mb-2">Ruta por el pinar</h4>
+                <p class="
+                    px-2 mb-2
+                    text-(--color-tierra)
+                    ">
+                    Senderos sombreados por el Parque Natural del Estrecho.
+                </p>
+                <a href="" class="
+                    m-2 p-2
+                    border 
+                    text-(--color-poniente) hover:text-(--color-cal)
+                    hover:bg-(--color-poniente)
+                    ">NATURALEZA
+                </a>
+            </article>
+            <article class="
+                border border-(--color-marisma) rounded-xl
+                overflow-hidden
+                mb-2 pb-3
+                ">
+                <img src="{% static 'main/images/aventura_ecuestre_paseos.jpg' %}" alt="" class="
+                mb-4
+
+                md:h-100">
+                <h4 class="px-2 mb-2">Atardecer en libertad</h4>
+                <p class="
+                    px-2 mb-2
+                    text-(--color-tierra)
+                    ">
+                    Los caballos en su hábitat natural al caer el sol.<br>Una experiencia única.
+                </p>
+                <a href="" class="
+                        p-2 m-2
+                        border 
+                        text-(--color-poniente) hover:text-(--color-cal)
+                        hover:bg-(--color-poniente)">
+                        EXCLUSIVO
+                </a>
+            </article>
         </div>
-                <div id="cta2">
-            <p>DOMA LIBRE<span>BIENESTAR ANIMAL</span></p>
-        </div>
-        <div id="cta3">
-            <p>TODOS LOS NIVELES<span>SIN EXPERIENCIA PREVIA</span></p>
-        </div>
-    </section>
-    <section>
-        <h2>NUESTRAS RUTAS</h2>
-        <h3>Elige tu aventura</h3>
-        <article>
-            <img src="" alt="">
-            <h4>Paseo por la playa</h4>
-            <p>Arena, olas y otro continente en el horizonte. La experiencia más demandada.</p>
-            <p><a href=""><img src="{% static 'images/icons/star.svg'} %" alt=""> MÁS POPULAR</a></p>
-        </article>
-        <article>
-            <img src="" alt="">
-            <h4>Ruta por el pinar</h4>
-            <p>Senderos sombreados por el Parque Natural del Estrecho.</p>
-            <p><a href="">NATURALEZA</a></p>
-        </article>
-        <article>
-            <img src="" alt="">
-            <h4>Atardecer en libertad</h4>
-            <p>Los caballos en su hábitat natural al caer el sol. Experiencia única.</p>
-            <a href="">EXCLUSIVO</a>
-        </article>
+        
     </section>
     
-    <section>
-        <p>"Nuestros caballos viven libres en el campo. Creemos en el vínculo real, no en la doma forzada.</p>
-        <p>FILOSOFÍA · DOMA LIBRE · BIENESTAR ANIMAL</p>
+    <section class="
+        bg-(--color-arena)
+        rounded-xl
+        m-10 p-5        ">
+        <p class="
+            font-cormorantgaramond font-italic
+            text-(--color-tierra)
+            mb-4
+
+            md:text-2xl md:text-center
+            ">
+            "Nuestros caballos viven libres en el campo. Creemos en el vínculo real, no en la doma forzada."</p>
+        <p class="
+            text-xs text-(--color-tierra)
+
+            md:text-center
+            ">FILOSOFÍA · DOMA NATURAL · BIENESTAR ANIMAL</p>
     </section>
 {% endblock %}
