@@ -1,0 +1,40 @@
+# Entorno y secretos
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Base de datos local
+*.sqlite3
+
+# Django
+*.log
+local_settings.py
+media/
+
+# Node / Tailwind
+node_modules/
+*.npm
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Archivos estáticos compilados (opcional, depende de tu flujo)
+staticfiles/

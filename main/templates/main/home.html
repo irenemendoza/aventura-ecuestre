@@ -6,30 +6,28 @@
 {% block content %}
     <section class="
     relative 
-    h-[50vh] w-full
-    flex flex-col justify-center
+    h-[80vh] w-full
+    flex flex-col justify-bottom
     ">
         <!-- Imagen de fondo -->
         <img 
-            src="{% static 'main/images/aventura_ecuestre_hero.jpg' %}" 
+            src="{% static 'main/images/aventura_ecuestre_hero_about.jpg' %}" 
             alt="" 
-            class="absolute inset-0 w-full h-full object-cover object-[center_35%]"
+            class="absolute inset-0 w-full h-full object-cover object-[80%_center]"
         >
         <!-- Capa oscura encima de la imagen -->
         <div class="absolute inset-0 bg-white/20"></div>
         <!-- Texto sobre la imagen -->
         <div id="content_hero" class="
-        z-10 p-10
-        w-full
-        flex-row justify-center
+            z-10 p-10        
         
-        md:w-[60%]
-        md:self-start"
-        >
+            md:w-[60%]
+            md:self-start">
             <h2 class="
                 font-cormorantgaramond font-bold text-(--color-mar)
                 text-center
                 py-5
+                
 
                 md:text-xl
                 md:text-left
@@ -38,7 +36,7 @@
             <h1 class="
                 relative 
                 text-center
-                text-(--color-cal) text-5xl font-cormorantgaramond font-bold
+                text-(--color-tierra) text-5xl font-cormorantgaramond font-bold
 
                 md:text-[60px]
                 md:inline
@@ -53,7 +51,7 @@
             </h1>
             <p class="
                 py-5
-                text-center text-(--color-cal)
+                text-center text-(--color-tierra)
 
                 md:text-xl
                 md:text-left
@@ -61,22 +59,38 @@
             <div id="hero_buttons" class="
                 py-5
                 text-center
+                flex
+                gap-2
 
                 md:text-left
                 md:flex md:items-center md:gap-7
                 ">
-                <button class="
+                <a href="{% url 'contact' %}" class="
                     text-(--color-tierra)
                     border
+                    bg-(--color-cal)
                     border-(--color-tierra)
                     hover:bg-(--color-tierra) hover:text-(--color-cal)
-                    p-2">RESERVAR EXPERIENCIA</button>
+                    p-2">RESERVAR EXPERIENCIA</a>
                 <a href="" class="
-                    text-(--color-cal)
-                    hover:text-(--color-poniente)
-                    "
+                    text-(--color-tierra)
+                    border
+                    bg-(--color-cal)
+                    border-(--color-tierra)
+                    hover:bg-(--color-tierra) hover:text-(--color-cal)
+                    p-2"
                     >VER ACTIVIDADES</a>
             </div>
+            
+            <ul class="flex justify-start">
+                <li>
+                    <a href="https://www.instagram.com/explore/locations/49608182887/aventura-ecuestre-tarifa/"><img src="{% static 'main/images/icons/instagram.svg' %}" alt="instagram" class="h-8 w-auto"></a>
+                </li>    
+                <li>
+                    <a href="https://www.facebook.com/Beachridingholidays"><img src="{% static 'main/images/icons/facebook.svg' %}" alt="facebook" class="h-8 w-auto"></a>
+                </li>
+            </ul>
+        
             </div>
     </section>
     <section class="
@@ -126,7 +140,7 @@
                 overflow-hidden
                 mb-2
                 ">
-                <img src="{% static 'main/images/aventura_ecuestre_beach.jpg' %}" alt="Caballos paseando por la playa" class="
+                <img src="{% static 'main/images/paseo_playa_2.jpg' %}" alt="Caballos paseando por la playa" class="
                 mb-4
                 
                 md:h-100">
@@ -136,6 +150,30 @@
                     text-(--color-tierra)
                     ">
                     Arena, olas y otro continente en el horizonte.<br>La experiencia más demandada.
+                </p>
+                <a href="" class="
+                    m-2 p-2
+                    border 
+                    text-(--color-poniente) hover:text-(--color-cal)
+                    hover:bg-(--color-poniente)
+                    ">NATURALEZA
+                </a>
+            </article>
+            <article class="
+                border border-(--color-marisma) rounded-xl
+                overflow-hidden
+                mb-2 pb-3
+                ">
+                <img src="{% static 'main/images/pinar.jpg' %}" alt="Caballos paseando por el pinar" class="
+                    mb-4
+
+                    md:h-100">
+                <h4 class="px-2 mb-2">Ruta por el pinar</h4>
+                <p class="
+                    px-2 mb-2
+                    text-(--color-tierra)
+                    ">
+                    Senderos sombreados por el Parque Natural del Estrecho.
                 </p>
                 <p class="px-2 mb-2">
                     <a href="" class="
@@ -156,32 +194,9 @@
                 overflow-hidden
                 mb-2 pb-3
                 ">
-                <img src="{% static 'main/images/aventura_ecuestre_paseos2.jpg' %}" alt="Caballos paseando por el pinar" class="
-                    mb-4
-
-                    md:h-100">
-                <h4 class="px-2 mb-2">Ruta por el pinar</h4>
-                <p class="
-                    px-2 mb-2
-                    text-(--color-tierra)
-                    ">
-                    Senderos sombreados por el Parque Natural del Estrecho.
-                </p>
-                <a href="" class="
-                    m-2 p-2
-                    border 
-                    text-(--color-poniente) hover:text-(--color-cal)
-                    hover:bg-(--color-poniente)
-                    ">NATURALEZA
-                </a>
-            </article>
-            <article class="
-                border border-(--color-marisma) rounded-xl
-                overflow-hidden
-                mb-2 pb-3
-                ">
-                <img src="{% static 'main/images/aventura_ecuestre_paseos.jpg' %}" alt="" class="
+                <img src="{% static 'main/images/atardecer.jpg' %}" alt="" class="
                 mb-4
+                object-cover
 
                 md:h-100">
                 <h4 class="px-2 mb-2">Atardecer en libertad</h4>
